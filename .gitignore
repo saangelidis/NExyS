@@ -1,0 +1,40 @@
+# Vivado generated directories
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+*.gen/
+*.tmp/
+.Xil/
+
+# Keep user sources, constraints, and the project file
+# (*.srcs/ and *.xpr are tracked)
+
+# Vivado logs and journals
+*.jou
+*.log
+*.str
+vivado_pid*.zip
+webtalk*
+
+# Build outputs
+*.bit
+*.bin
+*.mcs
+*.prm
+*.ltx
+*.dcp
+
+# Simulation artifacts
+xsim.dir/
+*.wdb
+*.pb
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
