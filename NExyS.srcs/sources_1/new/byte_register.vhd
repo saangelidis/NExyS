@@ -34,11 +34,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity byte_register is
 --  Port ( );
     port(
-      value_in: in std_logic_vector(7 downto 0);
-      write_enable: in std_logic;
-      read_enable: in std_logic;
-      clk: in std_logic;
-      value_out: out std_logic_vector(7 downto 0)
+      value_in     : in  std_logic_vector(7 downto 0);
+      write_enable : in  std_logic;
+      read_enable  : in  std_logic;
+      clk          : in  std_logic;
+      value_out    : out std_logic_vector(7 downto 0)
     );
 end byte_register;
 
@@ -47,7 +47,6 @@ architecture Behavioral of byte_register is
 signal value: std_logic_vector(7 downto 0);
 
 begin
-
     clk_proc : process(clk) 
     begin
         if (rising_edge(clk)) then
@@ -59,5 +58,4 @@ begin
             end if;
         end if;
     end process;
-
 end Behavioral;
