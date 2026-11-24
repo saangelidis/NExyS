@@ -35,12 +35,11 @@ use IEEE.NUMERIC_STD.ALL;
 entity ram is
 --  Port ( );
 port(
-    clk: in std_logic;
-    address: in std_logic_vector(10 downto 0);
-    data_in: in std_logic_vector(7 downto 0);
-    cs: in std_logic;
-    we: in std_logic;
-    data_out: out std_logic_vector(7 downto 0)
+    clk      : in    std_logic;
+    address  : in    std_logic_vector(10 downto 0);
+    data     : inout std_logic_vector(7 downto 0);
+    cs       : in    std_logic;
+    we       : in    std_logic
 );
 end ram;
 
@@ -53,9 +52,9 @@ clk_proc: process(clk)
 begin
     if rising_edge(clk) and cs = '1' then
         if we = '1' then
-            ram(to_integer(unsigned(address))) <= data_in;
+            ram(to_integer(unsigned(address))) <= data;
         else
-            data_out <= ram(to_integer(unsigned(address)));
+            data <= ram(to_integer(unsigned(address)));
         end if;
     end if;
 end process;
